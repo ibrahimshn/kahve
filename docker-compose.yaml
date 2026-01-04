@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: kahve-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb+srv://ibrahimsahinaws:elif.NUR17@kahve.ccifx0r.mongodb.net/kahve?appName=kahve
+      - APP_JWT_SECRET=${JWT_SECRET:Dt+wSXLLEgZ3uND0dIT5EFWVP9Px6+5jZk+IRc0QwHOiZi2c3vtmL1JFvlbD9iMwPHu/s0w2xE1NkC183EGVXw==}
+    restart: unless-stopped
+
